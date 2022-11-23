@@ -257,3 +257,22 @@ body{
     color: var(--cor-p2);
     font-weight: 600;
 }
+
+/* PÁGINA QUEM SOU */
+.quem-sou__titulo{
+    color: #121212;
+    font-size: 64px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.quem-sou__conteudo,
+.quem-sou__autor{
+    color: #404040;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.quem-sou__autor{
+    max-width: 16ch;
+}

@@ -18,4 +18,46 @@
     .header__menu-footer{
         font-size: .875rem;
     }
+
+    /* PÁGINA HOME*/
+    .atendimento__titulo{
+        font-size: 3.25rem;
+    }
+
+    .atendimento__sub-titulo{
+        font-size: 1.5rem;
+    }
+
+    /* .atendimento__link{
+        font-size: 1.125rem;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    /* PÁGINA HOME*/
+    .atendimento__titulo{
+        font-size: 2.5rem;
+    }
+
+    /*PÁGINA QUEM SOU */
+    .quem-sou__titulo{
+        font-size: 52px;
+    }
+
+    .quem-sou__conteudo, 
+    .quem-sou__autor{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    /* PÁGINA HOME*/
+    .atendimento__titulo{
+        font-size: 1.5rem;
+    }
+
+    .atendimento__sub-titulo,
+    .atendimento__link{
+        font-size: 1.125rem;
+    }
 }

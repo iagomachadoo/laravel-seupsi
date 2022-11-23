@@ -31,11 +31,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="header__menu navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
                         <li class="nav-item">
-                            <a class="header__menu-link nav-link active fw-bolder" aria-current="page" href="#">home</a>
+                            <a class="header__menu-link nav-link active fw-bolder" aria-current="page" href="{{ route('index') }}">home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="header__menu-link nav-link fw-bolder" href="#">quem sou</a>
+                            <a class="header__menu-link nav-link fw-bolder" href="{{ route('quem-sou') }}">quem sou</a>
                         </li>
 
                         <li class="nav-item dropdown">

@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\SiteController@index')->name('site.index');
+Route::get('/', [App\Http\Controllers\SiteController::class, 'index'])->name('index');
+
+Route::get('/quem-sou', [App\Http\Controllers\SiteController::class, 'quemSou'])->name('quem-sou');

@@ -15,4 +15,12 @@ class SiteController extends Controller
 
         return view('index', compact('duvidas', 'conteudosPerfil'));
     }
+
+    public function quemSou()
+    {
+        $duvidas = Duvidas::all();
+        $conteudosPerfil = ConteudoPerfil::all();
+
+        return view('quem-sou', compact('duvidas', 'conteudosPerfil'));
+    }
 }

@@ -9,20 +9,22 @@
         <div class="container px-3 py-5">
             <h1 class="atendimento__titulo mb-3">Como faço para marcar um <br> atendimento?</h1>
             <h2 class="atendimento__sub-titulo pt-1 mb-5">Segue abaixo algumas opções de contato.</h2>
-            <ul class="atendimento__lista d-flex justify-content-around align-items-center pt-3">
-                <li class="atendimento__item d-flex justify-content-center flex-column">
+            <ul class="atendimento__lista row pt-3 px-0">
+                <li class="atendimento__item col-lg-4 col-sm-6 d-flex justify-content-center flex-column mb-lg-0 mb-5">
                     <div class="atendimento__meio-comunic d-flex justify-content-center align-items-center mb-3 mx-auto">
                         <i class="bi bi-whatsapp atendimento__icone"></i>
                     </div>
-                    <a href="tel:+5522998008300" class="d-block pt-1 text-center atendimento__link">(22) 9.9800-8300</a>
+                    <a href="https://wa.me/+5522998008300" class="d-block pt-1 text-center atendimento__link">(22) 9.9800-8300</a>
                 </li>
-                <li class="atendimento__item d-flex justify-content-center flex-column">
+
+                <li class="atendimento__item col-lg-4 col-sm-6 d-flex justify-content-center flex-column mb-lg-0 mb-5">
                     <div class="atendimento__meio-comunic d-flex justify-content-center align-items-center mb-3 mx-auto">
                         <i class="bi bi-instagram atendimento__icone"></i>
                     </div>
                     <a href="#" class="d-block pt-1 text-center atendimento__link">seu.psi</a>
                 </li>
-                <li class="atendimento__item d-flex justify-content-center flex-column">
+
+                <li class="atendimento__item col-lg-4 d-flex justify-content-center flex-column">
                     <div class="atendimento__meio-comunic d-flex justify-content-center align-items-center mb-3 mx-auto">
                         <i class="bi bi-envelope atendimento__icone"></i>
                     </div>
