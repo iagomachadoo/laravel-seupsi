@@ -1,0 +1,1 @@
+<a href="{{$url}}" class="d-inline-block btn-padrao">{{$texto}}</a>

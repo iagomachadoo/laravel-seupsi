@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConteudoPerfilsTable extends Migration
+class CreateDepoimentosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateConteudoPerfilsTable extends Migration
      */
     public function up()
     {
-        Schema::create('conteudo_perfils', function (Blueprint $table) {
+        Schema::create('depoimentos', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('resumo');
-            $table->text('conteudo');
-            $table->string('img');
+            $table->tinyInteger('idade');
+            $table->string('cidade');
+            $table->text('mensagem');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateConteudoPerfilsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('conteudo_perfils');
+        Schema::dropIfExists('depoimentos');
     }
 }

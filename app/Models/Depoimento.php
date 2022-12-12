@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ConteudoPerfil extends Model
+class Depoimento extends Model
 {
     use HasFactory;
-    protected $filelabel = [
-        'titulo',
-        'resumo',
-        'conteudo',
-        'img',
+    protected $filelable = [
+        'idade',
+        'cidade',
+        'mensagem'
     ];
 }
