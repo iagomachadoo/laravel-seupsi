@@ -1,4 +1,8 @@
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .atendimento__meio-comunic{
+        padding: 15px;
+    }
+}
 
 @media screen and (max-width: 992px) {
     /* HEADER */
@@ -7,11 +11,23 @@
     }
     
     /* PÁGINA HOME*/
+    .atendimento__meio-comunic{
+        max-height: 80px;
+    }
+    
     .sobre__resumo{
         max-width: initial;
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .header__menu-footer:first-child{
+        margin-bottom: -4px;
+    }
+}
 
-@media screen and (max-width: 576px){}
+@media screen and (max-width: 576px){
+    .atendimento__meio-comunic{
+        padding: 10px;
+    }
+}

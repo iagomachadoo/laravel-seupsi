@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepoimentosTable extends Migration
+class CreateTemasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateDepoimentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('depoimentos', function (Blueprint $table) {
+        Schema::create('temas', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('idade');
-            $table->string('cidade');
-            $table->string('estado');
-            $table->text('mensagem');
-            $table->timestamps();
+            $table->string('nome');
+            $table->string('slug')->unique();
+            $table->dateTime('created_at');
+            $table->dateTime('update_at');
         });
     }
 
@@ -30,6 +29,6 @@ class CreateDepoimentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('depoimentos');
+        Schema::dropIfExists('temas');
     }
 }

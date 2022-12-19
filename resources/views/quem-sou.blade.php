@@ -8,7 +8,7 @@
             <img src="{{ asset('img/sobre/img-perfil-auto.webp')}}" alt="Fellype Ferraz Pecly" class="mx-auto img-fluid">
         </picture>
         <div class="pt-3 mb-5">
-            <h1 class="quem-sou__titulo font-xxl mb-4">Conheça o Fellype.</h1>
+            <h1 class="quem-sou__titulo font-xl mb-4">Conheça o Fellype.</h1>
 
             <p class="quem-sou__conteudo font-s pt-2">Entre idas e vindas em instituições hospitalares para o tratamento de um problema de saúde que durou cerca de dez anos, nasceu meu desejo pela psicologia. Em um espaço onde os corpos pedem ajuda e a mente quer auxílio, parecia difícil encontrar uma oportunidade para expressar todas as questões, entre as angústias à busca por amparo nem sempre é física, foi precisando falar que eu compreendi a importância de ter quem escutar.</p>
             <p class="quem-sou__conteudo font-s">Me construí psicólogo conhecendo outros, nunca mais me vi fazendo outra coisa. A minha atuação advém da união entre psicanálise e redes de saúde e atenção, onde sou constantemente convocado para trabalhar uma escuta sensível, ética e não excludente, induzido a construir uma clínica que também se faz para além do setting analítico tradicional. Durante minha graduação, me debrucei sobre a temática da angústia, do desamparo e do luto, da morte preanunciada e da finitude escancarada, compreendendo que nos percursos da vida até a morte é o paciente quem dá significado para própria existência, não sendo possível completar o trajeto correndo de si.</p>

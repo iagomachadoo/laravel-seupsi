@@ -17,3 +17,5 @@ Route::get('/', [App\Http\Controllers\SiteController::class, 'index'])->name('in
 Route::get('/quem-sou', [App\Http\Controllers\SiteController::class, 'quemSou'])->name('quem-sou');
 Route::get('/mensagens', [App\Http\Controllers\SiteController::class, 'mensagens'])->name('mensagens');
 Route::post('/mensagens', [App\Http\Controllers\SiteController::class, 'mensagensPost'])->name('mensagens-post');
+Route::get('/tema/{tema}', [App\Http\Controllers\SiteController::class, 'temasConteudos'])->name('tema');
+//Route::get('/tema/{tema}/{conteudo}', [App\Http\Controllers\SiteController::class, 'conteudo'])->name('conteudo');

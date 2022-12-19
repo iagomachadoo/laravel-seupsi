@@ -7,6 +7,7 @@
 
     <title>SeuPsi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{asset('css/glider.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/app-responsivo.css')}}">
@@ -31,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="header__menu navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
                         <li class="nav-item">
-                            <a class="header__menu-link font-s-b nav-link active" aria-current="page" href="{{ route('index') }}">home</a>
+                            <a class="header__menu-link font-s-b nav-link" href="{{ route('index') }}">home</a>
                         </li>
 
                         <li class="nav-item">
@@ -42,17 +43,13 @@
                             <a class="header__menu-link font-s-b nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">temas</a>
 
                             <ul class="header__menu-dropdown dropdown-menu">
-                                <li>
-                                    <a class="header__link-dropdown font-s-b dropdown-item" href="#">Ansiedade</a>
-                                </li>
-
-                                <li>
-                                    <a class="header__link-dropdown font-s-b dropdown-item" href="#">Depressão</a>
-                                </li>
-
-                                <li>
-                                    <a class="header__link-dropdown font-s-b dropdown-item" href="#">Luto</a>
-                                </li>
+                                @forelse ($temas as $tema)
+                                    <li>
+                                        <a class="header__link-dropdown font-s-b dropdown-item" href="{{ route('tema', $tema->slug) }}">{{ $tema->nome }}</a>
+                                    </li> 
+                                @empty
+                                    <p>A variável tema não existe</p>
+                                @endforelse
                             </ul>
                         </li>
 
@@ -88,19 +85,19 @@
                     <span class="footer__contato-titulo font-l d-block mb-2">Contatos</span>
                     <ul class="footer__contato-lista ps-0">
                         <li class="footer__contato-item mb-3 mt-1">
-                            <i class="bi bi-whatsapp footer__contato-icone me-1"></i>
+                            <i class="bi bi-whatsapp footer__contato-icone font-s me-1"></i>
                             <a href="tel:+5522998008300" class="footer__contato-link font-s ms-1">(22) 9.9800-8300</a>
                         </li>
                         <li class="footer__contato-item mb-3">
-                            <i class="bi bi-envelope footer__contato-icone me-1"></i>
+                            <i class="bi bi-envelope footer__contato-icone font-s me-1"></i>
                             <a href="mailto:fellype.pecly@gmail.com" class="footer__contato-link font-s ms-1">fellype.pecly@gmail.com</a>
                         </li>
                         <li class="footer__contato-item mb-3">
-                            <i class="bi bi-instagram footer__contato-icone me-1"></i>
+                            <i class="bi bi-instagram footer__contato-icone font-s me-1"></i>
                             <a href="#" class="footer__contato-link font-s ms-1">@seu.psi</a>
                         </li>
                         <li class="footer__contato-item">
-                            <i class="bi bi-tiktok footer__contato-icone me-1"></i>
+                            <i class="bi bi-tiktok footer__contato-icone font-s me-1"></i>
                             <a href="#" class="footer__contato-link font-s ms-1">seu.psi</a>
                         </li>
                     </ul>
@@ -114,7 +111,7 @@
                         <li class="footer__menu-sec-item mb-3">
                             <a href="#" class="footer__menu-sec-link font-m-b">quem sou</a>
                         </li>
-                        <li class="footer__menu-sec-item dropdown mb-3">
+                        {{-- <li class="footer__menu-sec-item dropdown mb-3">
                             <a href="#" class="footer__menu-sec-link font-m-b dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">temas</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -127,7 +124,7 @@
                                     <a class="dropdown-item font-m-b" href="#">Luto</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="footer__menu-sec-item mb-3">
                             <a href="#" class="footer__menu-sec-link font-m-b">mensagens</a>
                         </li>
@@ -175,19 +172,20 @@
             @endif
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary">OK</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
         </div>
         </div>
     </div>
     </div>
 
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('js/glider.min.js')}}"></script>
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
 
     @if (session('error') || session('errors') || session('success'))
         <script>
-            var modalMensagem = new bootstrap.Modal(document.getElementById('exampleModalCenter'));
+            var modalMensagem = new bootstrap.Modal(document.getElementById('exampleModal'));
             modalMensagem.show();
         </script>
     @endif

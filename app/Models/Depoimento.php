@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Depoimento extends Model
 {
     use HasFactory;
-    protected $filelable = [
+    protected $fillable = [
         'idade',
         'cidade',
+        'estado',
         'mensagem'
     ];
 }
